@@ -1,0 +1,963 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  color: white;
+}
+
+.navbar {
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo {
+  object-fit: cover;
+  height: 3rem;
+  width: 4rem;
+}
+
+.desktopMenuListItem {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.desktopMenuListItem:hover {
+  color: brown;
+  padding: 0.5rem;
+  border-bottom: 3px solid brown;
+}
+
+.desktopMenuImg {
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin: 1rem;
+}
+
+.desktopMenuBtn {
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+}
+
+#intro {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: brown;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.btn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.btnImg {
+  object-fit: cover;
+  margin: 0 0.25rem;
+  height: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .bg {
+    right: -10vw;
+  }
+}
+
+#skills {
+  overflow: hidden;
+  weight: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillDesc {
+  font-weight: 200;
+  max-width: 51rem;
+  padding: 0 2rem;
+  font-size: 1.05rem;
+}
+
+.skillBars {
+  margin: 1.5rem;
+  width: 100vw;
+  max-width: 80%;
+  text-align: left;
+}
+
+.skillBar {
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: rgb(50, 50, 50);
+}
+
+.skillBarImg {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.skillBarText > p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 720px) {
+  .skillBarText > p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillBarText > p {
+    font-size: 3vw;
+  }
+  .skillBarImg {
+    height: 2.25rem;
+    width: 2.25rem;
+    margin-right: 25px;
+  }
+  .skillText > h2 {
+    font-size: 5vw;
+  }
+}
+
+#works {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  weight: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 auto;
+}
+
+.worksTitle {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.worksDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 45rem;
+}
+
+.worksImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 65rem;
+  flex-wrap: wrap;
+}
+
+.worksImg {
+  object-fit: cover;
+  height: 20rem;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 585px) {
+  .worksImg {
+    height: 48vw;
+  }
+}
+
+/* ProgrammingLanguages.css */
+
+#programming-languages {
+  text-align: center;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tab:hover {
+  transform: scale(1.1);
+}
+
+.tabIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.tabContent {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.tabContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.proficiency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proficiencyBar {
+  height: 25px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.proficiency span {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Contact.css */
+
+#contact {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactPageTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactDesc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+.contactForm textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: #007BFF; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 12px 15px; /* Reduced padding for the button */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 120px; /* Fixed width */
+  text-align: center; /* Center text */
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Change background color on hover */
+.submitBtn:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+/* Change background color when active (clicked) */
+.submitBtn:active {
+  background-color: #004494; /* Even darker shade of primary color */
+}
+
+/* Add focus outline for accessibility */
+.submitBtn:focus {
+  outline: 2px solid #0056b3; /* Outline color */
+  outline-offset: 2px; /* Offset the outline */
+}
+
+/* Existing styles */
+.hidden {
+  display: none;
+}
+
+/* Add this class to handle hiding the contact button */
+.desktopMenuBtn.hidden {
+  display: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.navMenu {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background: rgb(40, 40, 40);
+  border-radius: 1rem;
+}
+
+.ListItem {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ListItem:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.active {
+  color: brown;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid brown;
+}
+
+.mobMenu {
+  display: none; /* Initially hide for larger screens */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobMenu {
+    display: block; /* Show on smaller screens */
+  }
+
+  .desktopMenu {
+    display: none; /* Hide desktop menu on smaller screens */
+  }
+
+  .desktopMenuBtn {
+    display: none; /* Hide contact button on smaller screens */
+  }
+}
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgb(30, 30, 30);
+  color: white;
+}
+
+.navbar {
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logo {
+  object-fit: cover;
+  height: 3rem;
+  width: 4rem;
+}
+
+.desktopMenuListItem {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.desktopMenuListItem:hover {
+  color: brown;
+  padding: 0.5rem;
+  border-bottom: 3px solid brown;
+}
+
+.desktopMenuImg {
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin: 1rem;
+}
+
+.desktopMenuBtn {
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+}
+.desktopMenuBtn:hover{
+ 
+  background-color: brown;
+}
+#intro {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: brown;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.btn {
+  background: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.btnImg {
+  object-fit: cover;
+  margin: 0 0.25rem;
+  height: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .bg {
+    right: -10vw;
+  }
+}
+
+#skills {
+  overflow: hidden;
+  weight: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skillTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillDesc {
+  font-weight: 200;
+  max-width: 51rem;
+  padding: 0 2rem;
+  font-size: 1.05rem;
+}
+
+.skillBars {
+  margin: 1.5rem;
+  width: 100vw;
+  max-width: 80%;
+  text-align: left;
+}
+
+.skillBar {
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: rgb(50, 50, 50);
+}
+
+.skillBarImg {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.skillBarText > p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 720px) {
+  .skillBarText > p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillBarText > p {
+    font-size: 3vw;
+  }
+  .skillBarImg {
+    height: 2.25rem;
+    width: 2.25rem;
+    margin-right: 25px;
+  }
+  .skillText > h2 {
+    font-size: 5vw;
+  }
+}
+
+#works {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  weight: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 auto;
+}
+
+.worksTitle {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.worksDesc {
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 45rem;
+}
+
+.worksImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 65rem;
+  flex-wrap: wrap;
+}
+
+.worksImg {
+  object-fit: cover;
+  height: 20rem;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 585px) {
+  .worksImg {
+    height: 48vw;
+  }
+}
+
+/* ProgrammingLanguages.css */
+
+#programming-languages {
+  text-align: center;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tab:hover {
+  transform: scale(1.1);
+}
+
+.tabIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.tabContent {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.tabContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.proficiency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proficiencyBar {
+  height: 25px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.proficiency span {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+/* Contact.css */
+
+#contact {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactPageTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactDesc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+.contactForm textarea {
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: #007BFF; /* Primary color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 12px 15px; /* Reduced padding for the button */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 120px; /* Fixed width */
+  text-align: center; /* Center text */
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Change background color on hover */
+.submitBtn:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+/* Change background color when active (clicked) */
+.submitBtn:active {
+  background-color: #004494; /* Even darker shade of primary color */
+}
+
+/* Add focus outline for accessibility */
+.submitBtn:focus {
+  outline: 2px solid #0056b3; /* Outline color */
+  outline-offset: 2px; /* Offset the outline */
+}
+
+/* Existing styles */
+.hidden {
+  display: none;
+}
+
+/* Add this class to handle hiding the contact button */
+.desktopMenuBtn.hidden {
+  display: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.navMenu {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background: rgb(40, 40, 40);
+  border-radius: 1rem;
+}
+
+.ListItem {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ListItem:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.active {
+  color: brown;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid brown;
+}
+
+.mobMenu {
+  display: none; /* Initially hide for larger screens */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobMenu {
+    display: block; /* Show on smaller screens */
+  }
+
+  .desktopMenu {
+    display: none; /* Hide desktop menu on smaller screens */
+  }
+
+  .desktopMenuBtn {
+    display: none; /* Hide contact button on smaller screens */
+  }
+}
