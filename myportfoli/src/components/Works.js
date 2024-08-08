@@ -9,8 +9,8 @@ function Works() {
       <div className='worksImgs'>
         <div className='workItem'>
           <img src={Portfolio1} alt='p1' className='worksImg'/>
-          <p className='pDesc'>My Portfolio</p>
-          <p className='pDesc'>https://remyhayaan.github.io/portfolio/</p>
+          <p className='pDesc'><a  href='https://remyhayaan.github.io/portfolio/'>My Portfolio</a></p>
+          
         </div>
        
        
