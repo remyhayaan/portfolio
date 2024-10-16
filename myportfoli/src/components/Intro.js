@@ -46,9 +46,10 @@ function Intro() {
         <div className='introContent'>
           <span className='hello'>Hey there..</span>
           <span className='introText'>I'm <span className='introName'>
-            <br />Nabukenya Rehemah</span><br />
+            <br />Nabukenya Rehemah</span> <br/>
+            <p className='introPara'>I am experienced in </p>
             {displayedText}</span>
-        
+          
           {/* New Download CV button */}
           <a href={cv} download="CV.docx">
             <button className='btn'>
