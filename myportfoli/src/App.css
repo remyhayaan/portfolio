@@ -71,13 +71,30 @@ body {
   position: relative;
 }
 
+.bgSmall {
+  display: none; /* Hide background image on larger screens */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1; /* Position it behind content */
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw; /* Full width for small screens */
+  opacity: 0.5; /* Set transparency level (0 to 1) */
+  filter: blur(4px); /* Apply blur effect */
+}
+
 .bg {
   position: absolute;
   top: -4rem;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   object-fit: cover;
   height: 100vh;
+  width: auto; /* Maintain original width */
+}
+.introDiv {
+  position: relative; /* To position images correctly */
 }
 
 .introContent {
@@ -89,6 +106,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative; /* Add positioning for overlay */
+  z-index: 3; /* Ensure content is above images */
+  border-radius: 10px; /* Optional: add rounded corners */
 }
 
 .hello {
@@ -119,9 +139,13 @@ body {
   height: 1rem;
 }
 
-@media screen and (max-width: 480px) {
+/* Media Query for Small Screens */
+@media (max-width: 950px) {
+  .bgSmall {
+    display: block; /* Show new background image on small screens */
+  }
   .bg {
-    right: -10vw;
+    display: none; /* Hide profile image on small screens */
   }
 }
 
