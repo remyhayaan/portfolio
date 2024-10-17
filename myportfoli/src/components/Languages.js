@@ -1,48 +1,60 @@
-import React, { useState } from 'react';
-import JavaScriptIcon from '../assets/javascript.png';
-import HTMLIcon from '../assets/html.png';
-import ReactIcon from '../assets/react.png';
-import SqlIcon from '../assets/sql.png';
-import CssIcon from '../assets/css.png';
+import React, { useEffect, useState, useRef } from 'react';
 
-// Import other language icons as needed
-
-const languages = [
-  { name: 'JavaScript', icon: JavaScriptIcon, proficiency: 50 },
-  { name: 'HTML', icon: HTMLIcon, proficiency: 90 },
-  { name: 'ReactJs', icon: ReactIcon, proficiency: 70 },
-  { name: 'Sql', icon: SqlIcon, proficiency: 60 },
-  { name: 'Css', icon: CssIcon, proficiency: 80 },
-  // Add more languages as needed
+const skillsData = [
+  { title: "Web Development: HTML, CSS, JavaScript, React", level: 80 },
+  { title: "Database Management: SQL, MongoDB", level: 10 },
+  { title: "Programming Languages: Java, Python, Object Oriented PHP", level: 70 },
+  { title: "Software Development: Agile methodologies, Git", level: 90 },
+  { title: "Tools: Visual Studio Code, IntelliJ, GitLab", level: 85 }
 ];
 
-function Languages() {
-  const [activeTab, setActiveTab] = useState(languages[0]);
+const Languages = () => {
+  const [inView, setInView] = useState(false);
+  const skillRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setInView(true); // Animate when in view
+        } else {
+          setInView(false); // Reset when out of view
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% of the component is visible
+    );
+    
+    if (skillRef.current) {
+      observer.observe(skillRef.current);
+    }
+    
+    return () => {
+      if (skillRef.current) {
+        observer.unobserve(skillRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div id='programming-languages'>
-      <h1 className='sectionTitle'>Programming Languages I Know</h1>
-      <div className='tabs'>
-        {languages.map((language, index) => (
-          <div
-            key={index}
-            className={`tab ${activeTab.name === language.name ? 'active' : ''}`}
-            onClick={() => setActiveTab(language)}
-          >
-            <img src={language.icon} alt={language.name} className='tabIcon' />
-            <span>{language.name}</span>
+    <section id='languages'>
+    <div className="skills-container" ref={skillRef}>
+      <h2 className='skill-heading'>My Skills</h2>
+      {skillsData.map((skill, index) => (
+        <div key={index} className="skill">
+          <span className="skill-title">{skill.title}</span>
+          <div className="progress-bar-container">
+            <div
+              className="progress-bar"
+              style={{ width: inView ? `${skill.level}%` : '0%', transition: 'width 1s ease-in-out' }}
+            ></div>
           </div>
-        ))}
-      </div>
-      <div className='tabContent'>
-        <h2>{activeTab.name}</h2>
-        <div className='proficiency'>
-          <div className='proficiencyBar' style={{ width: `${activeTab.proficiency}%` }}></div>
-          <span>{activeTab.proficiency}%</span>
+          <span className="skill-level">{skill.level}%</span>
         </div>
-      </div>
+      ))}
     </div>
+    </section>
   );
-}
+};
 
 export default Languages;

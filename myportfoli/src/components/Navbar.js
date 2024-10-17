@@ -14,7 +14,7 @@ const [showMenu , setshowMenu] = useState(false);
         <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Home</Link>
         <Link activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>About</Link>
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Skills</Link>
-        <Link activeClass='active' to='programming-languages' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Languages</Link>
+        <Link activeClass='active' to='languages' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Languages</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Portfolio</Link>
       </div>
       <button className='desktopMenuBtn' onClick={() => {

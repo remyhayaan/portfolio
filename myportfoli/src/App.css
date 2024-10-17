@@ -410,72 +410,55 @@ body {
 
 /* ProgrammingLanguages.css */
 
-#programming-languages {
+
+
+.skills-container {
+  width: 80%; /* Occupies 80% of the page width */
+  margin: 50px auto; /* Center the container */
+}
+
+h2.skill-heading {
   text-align: center;
-  padding: 20px;
+  font-size: 45px; /* Large heading */
+  color: #FFF; /* White heading text */
+  margin-bottom: 40px;
 }
 
-.sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.skill {
+  display: flex; /* Flexbox to align items in a row */
+  justify-content: space-between; /* Spreads out title, progress bar, and percentage */
+  align-items: center; /* Vertically centers items */
+  margin-bottom: 30px; /* Space between skill entries */
 }
 
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 15px;
+.skill-title {
+  width: 40%; /* Skill title takes 40% of the row */
+  font-size: 22px; /* Larger font for skill titles */
 }
 
-.tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.progress-bar-container {
+  width: 50%; /* Progress bar container takes 50% */
+  background-color: #333; /* Dark background for empty progress bar */
+  border-radius: 20px;
+  height: 25px; /* Medium-height progress bar */
+  position: relative; /* Ensures the bar is positioned inside the container */
+  overflow: hidden;
 }
 
-.tab:hover {
-  transform: scale(1.1);
+.progress-bar {
+  background-color: #6A1B9A; /* Purple progress bar */
+  height: 100%; /* Fills the height of the container */
+  border-radius: 20px;
+  width: 0; /* Start width at 0 */
+  transition: width 1s ease-in-out; /* Smooth transition for width */
 }
 
-.tabIcon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 5px;
+.skill-level {
+  width: 10%; /* Skill percentage takes up 10% of the row */
+  text-align: right;
+  font-size: 22px;
 }
 
-.tab.active {
-  border-bottom: 2px solid #007bff;
-}
-
-.tabContent {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.tabContent h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.proficiency {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.proficiencyBar {
-  height: 25px;
-  background-color: #007bff;
-  transition: width 0.3s ease;
-}
-
-.proficiency span {
-  margin-left: 10px;
-  font-size: 1.2rem;
-}
 
 /* Contact.css */
 
