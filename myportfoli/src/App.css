@@ -25,6 +25,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 3;
+  
 }
 
 .logo {
@@ -69,6 +70,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  
 }
 
 .bgSmall {
@@ -410,7 +412,10 @@ body {
 
 /* ProgrammingLanguages.css */
 
-
+#languages {
+  background-color: #333;
+  padding-bottom: 10px;
+}
 
 .skills-container {
   width: 80%; /* Occupies 80% of the page width */
@@ -422,6 +427,7 @@ h2.skill-heading {
   font-size: 45px; /* Large heading */
   color: #FFF; /* White heading text */
   margin-bottom: 40px;
+  padding-top: 30px;
 }
 
 .skill {
@@ -458,6 +464,64 @@ h2.skill-heading {
   text-align: right;
   font-size: 22px;
 }
+
+/* RESPONSIVENESS */
+
+/* For tablet screens (up to 768px) */
+@media (max-width: 768px) {
+  .skills-container {
+    width: 90%; /* Increase container width */
+  }
+
+  h2.skill-heading {
+    font-size: 36px; /* Smaller heading size */
+  }
+
+  .skill {
+    flex-direction: column; /* Stack skill title, progress bar, and level vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .skill-title,
+  .skill-level {
+    width: 100%; /* Full width for titles and percentages */
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .progress-bar-container {
+    width: 100%; /* Progress bar takes full width */
+    height: 20px; /* Adjust progress bar height */
+  }
+
+  .skill-level {
+    text-align: left; /* Align percentage to the left */
+    margin-top: 10px; /* Space between bar and percentage */
+  }
+}
+
+/* For mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .skills-container {
+    width: 95%; /* Occupies almost full page width */
+  }
+
+  h2.skill-heading {
+    font-size: 28px; /* Reduce heading size for smaller screens */
+  }
+
+  .skill-title {
+    font-size: 16px; /* Further reduce font size for mobile */
+  }
+
+  .skill-level {
+    font-size: 16px; /* Reduce skill percentage font size */
+  }
+
+  .progress-bar-container {
+    height: 15px; /* Shorter progress bar height */
+  }
+}
+
 
 
 /* Contact.css */
@@ -1107,5 +1171,92 @@ body {
 
   .desktopMenuBtn {
     display: none; /* Hide contact button on smaller screens */
+  }
+}
+/* General styling with black background and white text */
+.work-experience {
+  padding: 20px;
+  background-color: #000; /* Black background */
+  color: #fff;            /* White text */
+  font-family: Arial, sans-serif;
+}
+
+/* Experience list styles with animation */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Hidden state before animation starts */
+.hidden {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/* Visible state with animation */
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Experience item styling - no borders or outline */
+.experience {
+  padding: 15px;
+  background-color: #111; /* Slightly lighter black for contrast */
+  border: none;           /* No borders */
+  box-shadow: none;       /* No box-shadow */
+  border-radius: 0;       /* No border radius */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s forwards; /* Animation */
+}
+
+/* Adding delay to each experience item to create a staggered effect */
+.experience:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.experience:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.experience:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-list {
+    padding: 10px;
+  }
+
+  .experience {
+    padding: 10px;
+  }
+
+  h3, h4, p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-list {
+    padding: 5px;
+  }
+
+  .experience {
+    padding: 8px;
+  }
+
+  h3, h4, p {
+    font-size: 12px;
   }
 }

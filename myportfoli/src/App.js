@@ -6,7 +6,7 @@ import Works from './components/Works'
 import Contact from './components/Contact';
 import Languages from './components/Languages';
 import About from './components/About';
-
+import WorkExperience from './components/Experience';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
      <About/>
      <Skills />
      <Languages/>
+     <WorkExperience/>
      <Works/>
      <Contact/>
     </div>
