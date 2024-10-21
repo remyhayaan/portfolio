@@ -413,7 +413,7 @@ body {
 /* ProgrammingLanguages.css */
 
 #languages {
-  background-color: #333;
+  background-color: black;
   padding-bottom: 10px;
 }
 
@@ -452,7 +452,7 @@ h2.skill-heading {
 }
 
 .progress-bar {
-  background-color: #6A1B9A; /* Purple progress bar */
+  background-color:brown; /* Purple progress bar */
   height: 100%; /* Fills the height of the container */
   border-radius: 20px;
   width: 0; /* Start width at 0 */
@@ -531,91 +531,85 @@ h2.skill-heading {
   text-align: center;
   display: flex;
   flex-direction: column;
-}
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* Aligning all content to center */
 }
 
 .contactPageTitle {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
+  color: #fff; /* Title color */
 }
 
 .contactDesc {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
   text-align: center;
+  color: #fff; /* Paragraph color updated to white */
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  width: 100%;
   margin: auto;
 }
 
 .contactForm input,
 .contactForm textarea {
-  padding: 10px;
+  width: 100%; /* Full width input */
+  padding: 12px;
   margin-bottom: 15px;
   border-radius: 5px;
+  border: 1px solid #ccc;
   font-size: 1rem;
-  background-color: #333;
+  background-color:black;
   color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for input hover */
 }
 
-.contactForm input::placeholder,
-.contactForm textarea::placeholder {
-  color: #aaa;
+.contactForm input:hover,
+.contactForm textarea:hover {/* Lighter background on hover */
+  border-color: yellow; /* Border color on hover */
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color:yellow;
+  outline: none;
 }
 
 .contactForm textarea {
   resize: vertical;
+  min-height: 100px;
 }
 
 .submitBtn {
-  background-color: #007BFF; /* Primary color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  padding: 12px 15px; /* Reduced padding for the button */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-  width: 120px; /* Fixed width */
-  text-align: center; /* Center text */
-  align-items: center;
+  background-color: yellow;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 120px;
+  text-align: center;
   margin-top: 20px;
 }
 
-/* Change background color on hover */
 .submitBtn:hover {
-  background-color: #0056b3; /* Darker shade of primary color */
+  background-color: yellowgreen;
 }
 
-/* Change background color when active (clicked) */
 .submitBtn:active {
-  background-color: #004494; /* Even darker shade of primary color */
+  background-color: yellow;
 }
 
-/* Add focus outline for accessibility */
 .submitBtn:focus {
-  outline: 2px solid #0056b3; /* Outline color */
-  outline-offset: 2px; /* Offset the outline */
-}
-
-/* Existing styles */
-.hidden {
-  display: none;
-}
-
-/* Add this class to handle hiding the contact button */
-.desktopMenuBtn.hidden {
-  display: none;
+  outline: 2px solid yellowgreen;
+  outline-offset: 2px;
 }
 
 .links {
@@ -634,7 +628,9 @@ h2.skill-heading {
 
 .link:hover {
   transform: scale(1.1);
+  filter: brightness(1.2); /* Brighten icon on hover */
 }
+
 
 .navMenu {
   position: absolute;

@@ -4,34 +4,36 @@ import { useInView } from "react-intersection-observer";
 
 const WorkExperience = () => {
   const experiences = [
+    
     {
-      role: "Software Developer",
-      company: "Tech Innovators Ltd",
-      duration: "June 2022 - Present",
-      description: "Developed and maintained web applications, collaborated with cross-functional teams, and optimized application performance."
-    },
-    {
-      role: "Frontend Developer",
-      company: "Creative Solutions",
-      duration: "Jan 2021 - May 2022",
-      description: "Designed and implemented UI components for multiple client projects, ensuring mobile responsiveness and high accessibility."
-    },
-    {
-      role: "Intern Web Developer",
-      company: "Future Technologies",
-      duration: "June 2020 - Dec 2020",
-      description: "Assisted in the development of e-commerce websites, improved website performance, and fixed bugs across various projects."
+      "role": "Internship Student",
+      "company": "Stratcom Communication and IT Technologies",
+      "duration": "May, 2023 - August, 2023",
+      "description": "Developed and maintained web applications, collaborated with cross-functional teams, optimized application performance.Incorporated responsive design principles to ensure compatibility across various devices and screen sizes, enhancing user experience.Created visually appealing graphics and multimedia elements for websites and promotional materials.",
+    "description2":"Contributed to networking tasks, including configuring and troubleshooting network devices, managing firewalls, ensuring network security, and optimizing network performance to support high-availability systems. Actively participated in network monitoring and diagnostics to ensure seamless connectivity across systems.",
     }
+    
+
   ];
 
   // Intersection Observer setup without `triggerOnce`
   const { ref, inView } = useInView({
-    threshold: 0.2, // 20% of the element is in view
+    threshold: 0.05, // 20% of the element is in view
   });
 
   return (
     <div className="work-experience">
-      <h2>Work Experience</h2>
+     <h2 style={{ 
+            fontFamily: 'Arial, sans-serif', 
+            fontSize: '30px', 
+            color: 'white', 
+             textAlign: 'center',
+            marginBottom: '10px', 
+            borderBottom: '2px solid brown', 
+            paddingBottom: '5px' 
+        }}>
+            Work Experience
+        </h2>
       <div ref={ref} className={`experience-list ${inView ? "visible" : "hidden"}`}>
         {experiences.map((experience, index) => (
           <div key={index} className="experience">
@@ -39,6 +41,8 @@ const WorkExperience = () => {
             <h4>{experience.company}</h4>
             <p>{experience.duration}</p>
             <p>{experience.description}</p>
+            <p>{experience.description2}</p>
+            
           </div>
         ))}
       </div>

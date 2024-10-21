@@ -12,7 +12,7 @@ function About() {
         const entry = entries[0];
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger when 10% of the section is visible
+      { threshold: 0.5} 
     );
 
     if (aboutRef.current) {
@@ -43,15 +43,17 @@ function About() {
         {/* About Me Section */}
         <div className="about-text">
           <h2>About Me</h2>
-          <p>
-            Hi, I'm [Your Name], a passionate web developer skilled in React, Tailwind CSS, and more.
-            I enjoy creating dynamic web applications and have experience working on various projects
-            related to livestock farming, fashion blogs, and portfolio pages.
-          </p>
-          <p>
-            My expertise includes JavaScript, C programming, and network administration. I'm also
-            proficient in Microsoft 365 Productivity suite and office equipment management.
-          </p>
+       
+<p>
+    Hi, I’m Nabukenya Rehemah, a dedicated web developer with a strong proficiency in the MERN stack (MongoDB, Express, React, Node.js), CSS, Vanilla JavaScript, PHP, HTML, and MySQL. I thrive on creating dynamic and user-friendly web applications that provide engaging experiences for users.
+</p>
+<p>
+    My background in Information Systems and Technology has equipped me with a solid foundation in both web development and database management. I have successfully applied my skills in various school projects, which have honed my ability to tackle real-world challenges. Additionally, I possess strong capabilities in network administration, ensuring seamless connectivity and performance.
+</p>
+<p>
+    I am also proficient in the Microsoft 365 Productivity suite, allowing me to streamline workflows and enhance collaboration within teams. With a passion for continuous learning and innovation, I am excited about the opportunity to contribute to impactful projects and drive success within a forward-thinking organization.
+</p>
+
         </div>
 
       </div>
