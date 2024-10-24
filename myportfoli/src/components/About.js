@@ -48,12 +48,11 @@ function About() {
     Hi, I’m Nabukenya Rehemah, a dedicated web developer with a strong proficiency in the MERN stack (MongoDB, Express, React, Node.js), CSS, Vanilla JavaScript, PHP, HTML, and MySQL. I thrive on creating dynamic and user-friendly web applications that provide engaging experiences for users.
 </p>
 <p>
-    My background in Information Systems and Technology has equipped me with a solid foundation in both web development and database management. I have successfully applied my skills in various school projects, which have honed my ability to tackle real-world challenges. Additionally, I possess strong capabilities in network administration, ensuring seamless connectivity and performance.
-</p>
-<p>
-    I am also proficient in the Microsoft 365 Productivity suite, allowing me to streamline workflows and enhance collaboration within teams. With a passion for continuous learning and innovation, I am excited about the opportunity to contribute to impactful projects and drive success within a forward-thinking organization.
+    I have a strong foundation in web development and database management, thanks to my background in Information Systems and Technology. I have applied these skills in various school projects, enhancing my ability to solve real-world challenges. I am also skilled in network administration, ensuring seamless connectivity and performance.
 </p>
 
+
+<p> I am proficient in the Microsoft 365 Productivity suite, enabling me to streamline workflows and enhance collaboration within teams. With a passion for continuous learning and innovation, I am excited to contribute to impactful projects and drive success within a forward-thinking organization. </p>
         </div>
 
       </div>

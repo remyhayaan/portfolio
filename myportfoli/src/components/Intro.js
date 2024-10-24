@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import btnImg from '../../src/assets/hireme.png';
-import cv from '../../src/assets/CV.docx';
+import cv from '../../src/assets/Nabukenya-Rehemah-CV.docx';
 import bg from '../../src/assets/remy1.jpg'; // Profile image
+import smallScreenImg from '../../src/assets/bw.jfif'; // New image for smaller screens
 
 function Intro() {
-  const roles = ["Frontend Development", "Database Management", "Network Administration","System Development"];
+  const roles = ["Frontend Development", "Database Management", "Network Administration", "System Development"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
@@ -38,6 +39,8 @@ function Intro() {
     <section id='intro'>
       <div className='introDiv'>
         <img src={bg} alt='Profile' className='bg' />
+        {/* This is the new image for small screens */}
+        <img src={smallScreenImg} alt="Small Screen" className='bgSmall' />
         <div className='introContent'>
           <span className='hello'>Hey there..</span>
           <span className='introText'>

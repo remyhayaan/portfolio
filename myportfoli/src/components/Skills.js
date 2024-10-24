@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import UIDesign from '../../src/assets/ui-design.png';
 import WebDesign from '../../src/assets/website-design.png';
 import AppDesign from '../../src/assets/app-design.png';
+import DbDesign from '../../src/assets/db.jfif';
+import NetworkDesign from '../../src/assets/network.jfif';
+
 
 function Skills() {
   const skillsRef = useRef(null);
@@ -58,13 +61,13 @@ function Skills() {
             </div>
           </div>
           <div className='skillBar'>
-            <img src='' alt='coding' className='skillBarImg' /> {/* Placeholder for coding */}
+            <img src={NetworkDesign} alt='coding' className='skillBarImg' /> {/* Placeholder for coding */}
             <div className='skillBarText'>
             <h2>Network Administration</h2> <p> Skilled in configuring, managing network systems, troubleshooting connectivity issues and implementing network protocols. 
                </p>         </div>
           </div>
           <div className='skillBar'>
-            <img src='' alt='database' className='skillBarImg' /> {/* Placeholder for database */}
+            <img src={DbDesign} alt='database' className='skillBarImg' /> {/* Placeholder for database */}
             <div className='skillBarText'>
               <h2>Database Management</h2>
               <p> Proficient in  designing architectures, managing databases for data storage, retrieval, and security. 
