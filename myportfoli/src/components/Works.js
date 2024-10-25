@@ -45,7 +45,7 @@ function Works() {
         <div className="workItem">
           <img src={Portfolio1} alt="Portfolio Project 1" className="worksImg" />
           <p className="pDesc">
-            <a href="https://remyhayaan.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+            <a href="https://portfolio-five-roan-70.vercel.app" target="_blank" rel="noopener noreferrer">
               My Portfolio
             </a>
           </p>
