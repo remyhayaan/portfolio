@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import btnImg from '../../src/assets/hireme.png';
 import cv from '../../src/assets/Nabukenya-Rehemah-CV.docx';
-import bg from '../../src/assets/remy1.jpg'; // Profile image
+//import bg from '../../src/assets/remy1.jpg'; // Profile image
 import smallScreenImg from '../../src/assets/bw.jfif'; // New image for smaller screens
 
 function Intro() {
