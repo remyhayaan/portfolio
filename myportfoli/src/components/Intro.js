@@ -38,7 +38,7 @@ function Intro() {
   return (
     <section id='intro'>
       <div className='introDiv'>
-        <img src={bg} alt='Profile' className='bg' />
+        //<img src={bg} alt='Profile' className='bg' />
         {/* This is the new image for small screens */}
         <img src={smallScreenImg} alt="Small Screen" className='bgSmall' />
         <div className='introContent'>
