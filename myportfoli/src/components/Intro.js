@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import btnImg from '../../src/assets/hireme.png';
 import cv from '../../src/assets/Nabukenya-Rehemah-CV.docx';
-import bg from '../../src/assets/remy1.jpg';
+//import bg from '../../src/assets/remy1.jpg';
 import smallScreenImg from '../../src/assets/bw.jfif'; // New image for smaller screens
 
 function Intro() {
@@ -38,13 +38,13 @@ function Intro() {
   return (
     <section id='intro'>
       <div className='introDiv'>
-     <img src={bg} alt='Profile' className='bg' />
+     {/*<img src={bg} alt='Profile' className='bg' />*/}
         {/* This is the new image for small screens */}
         <img src={smallScreenImg} alt="Small Screen" className='bgSmall' />
         <div className='introContent'>
           <span className='hello'>Hey there..</span>
           <span className='introText'>
-            I'm <span className='introName'>Nabukenya Rehemah</span> <br />
+           <span className='introName'>Nabukenya Rehemah</span> <br />
             <p className='introPara'>I am experienced in </p>
             {displayedText}
           </span>
